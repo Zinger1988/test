@@ -1,0 +1,65 @@
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.input-text,
+.input-select,
+.input-textarea {
+  -moz-appearance: textfield;
+  border: 1px solid #C7C7C7;
+  padding: .9rem 1.05rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.333;
+  border-radius: 4px;
+  outline: none;
+  display: block;
+  @include animate(border);
+
+  @include media(">=md"){
+    padding: 1.1rem 1.25rem;
+    font-size: 1.4rem;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  @include placeholder {
+    color: $base-text-color;
+    opacity: .6;
+    @include animate(opacity);
+  }
+
+  &:focus {
+    border-color: #888;
+    outline: none;
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.input-text{
+  @extend %nowrap;
+
+  &--calendar{
+    background: url("../img/calendar.svg") calc(100% - 1rem) center/ 1.6rem auto no-repeat;
+    padding: .9rem 3.4rem .9rem 1.05rem;
+
+    @include media(">=md"){
+      padding: 1.1rem 3.5rem 1.1rem 1.25rem;
+    }
+  }
+}
+
+.input-textarea {
+  resize: vertical;
+  min-height: 8rem;
+}

@@ -1,0 +1,46 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+// Name that color https://chir.ag/projects/name-that-color/
+
+$mineShaft: #262626;
+$dodgerBlue: #1D9DFF;
+$scienceBlue: #006ECE;
+$black: #000000;
+$white: #ffffff;
+$brightTurquoise: #00C2FF;
+$mercury: #E8E8E8;
+$empreror: #515151;
+
+// Layers
+$sidebar-z-index: 10000;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 62.5%;
+
+// Body
+$base-text-color: $mineShaft;
+$base-background-color: $white;
+$font-size-base: 1.3rem;
+$base-line-height: 1.333;
+$base-font-family: 'Roboto', 'Arial', sans-serif;
+
+// Liks
+$base-link-color: $dodgerBlue;
+
+// Forms
+$form-element-padding: 1rem 1.5rem 1rem;
+$form-element-border-color: #CED3D2;
+$form-element-focus-border-color: #8F9594;
+$placeholder-color: #A1A1A1;
+
+// Headers
+$h1-font-size: 2.375em;
+$h2-font-size: 1.75em;
+$h3-font-size: 1.3125em;
+$h4-font-size: 1.125em;
+$h5-font-size: 1em;
+$h6-font-size: 1em;
+
+// Animation
+$animation-speed: 0.3s;

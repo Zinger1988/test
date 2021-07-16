@@ -1,0 +1,45 @@
+.form{
+
+  &__body{
+    margin-bottom: 2rem;
+  }
+
+  &__group{
+    display: block;
+    margin-bottom: 1rem;
+
+    @include media(">=md"){
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__group-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: .7em;
+
+    @include media(">=md"){
+      font-size: 1.7rem;
+      margin-bottom: .8em;
+    }
+  }
+
+  &__row{
+    margin-bottom: 1rem;
+
+    @include media(">=md"){
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__footer{
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #F1F7FB;
+    text-align: center;
+
+    @include media(">=md"){
+      padding: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// link reset
+%linkreset {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// button reset
+%buttonreset {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  -webkit-appearance: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+// no wrap
+%nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-overflow{
+  overflow: hidden;
+}
+
+.bg--blue{
+  background-color: #006ECE;
+}
+
+.bg--orange{
+  background-color: #FFC524;
+}
+
+.bg--green{
+  background-color: #27C146;
+}
+
+.bg--violet{
+  background-color: #9809B4;
+}
+
+.bg--cyan{
+  background-color: #24BCFF;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+

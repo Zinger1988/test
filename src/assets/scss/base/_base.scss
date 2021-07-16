@@ -1,0 +1,37 @@
+@import "fonts";
+@import "typography";
+@import "forms";
+@import "helpers";
+
+html, body{
+  height: 100%;
+}
+
+html {
+  font-size: $rem-base;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  color: $base-text-color;
+  overflow-x: hidden;
+}
+
+body{
+  font-size: $font-size-base;
+
+  @include media(">=md"){
+    font-size: 1.4rem;
+  }
+
+  @include media(">=xl"){
+
+    &.no-overflow{
+      overflow: auto;
+    }
+  }
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}

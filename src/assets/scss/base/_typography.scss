@@ -1,0 +1,152 @@
+// Typography
+
+h1, .heading-1,
+h2, .heading-2,
+h3, .heading-3,
+h4, .heading-4,
+h5, .heading-5,
+h6, .heading-6{
+  font-weight: 700;
+}
+
+h1,
+.heading-1{
+  font-size: $h1-font-size;
+  margin: 0.407em 0 .8157em;
+}
+
+h2,
+.heading-2{
+  font-size: $h2-font-size;
+  margin: .857em 0;
+}
+
+h3,
+.heading-3{
+  font-size: $h3-font-size;
+}
+
+h4,
+.heading-4{
+  font-size: $h4-font-size;
+}
+
+h5,
+.heading-5{
+  font-size: $h5-font-size;
+}
+
+h6,
+.heading-6{
+  font-size: $h6-font-size;
+}
+
+h1, .heading-1,
+h2, .heading-2{
+  line-height: 1.255;
+}
+
+h3, .heading-3,
+h4, .heading-4{
+  line-height: 1.23;
+  margin: 1em 0;
+}
+
+h5, .heading-5,
+h6, .heading-6{
+  margin: .5em 0;
+}
+
+p, .paragraph{
+  margin: 0 0 1em;
+}
+
+b, .bold{
+  font-weight: 700;
+}
+
+ul:not([class]):not([id]),
+.unordered-list{
+  @include list-default(){
+    content: "";
+    vertical-align: middle;
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    background-color: $dodgerBlue;
+    margin: 0 1.1em 0 -1.5em;
+    position: relative;
+    top: -.1em;
+  }
+}
+
+ol:not([class]):not([id]),
+.ordered-list{
+  counter-reset: numeric-list;
+
+  @include list-default(){
+    vertical-align: baseline;
+    counter-increment: numeric-list;
+    content: counter(numeric-list)".";
+    font-weight: 700;
+    color: $dodgerBlue;
+    width: 1.5em;
+    margin: 0 0 0 -1.5em;
+    position: relative;
+  }
+}
+
+a, .anchor {
+  color: $base-link-color;
+  text-decoration-color: $base-link-color;
+  @include animate('text-decoration-color');
+
+  &:hover{
+    text-decoration-color: transparent;
+  }
+}
+
+table:not([class]):not([id]),
+.table{
+  display: table;
+  margin: 1.375em 0 1.375em 0;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr,
+  .table__row{
+    display: table-row;
+  }
+
+  tr:nth-child(odd) td,
+  .table__row:nth-child(odd) .table__cell{
+    background-color: #F5F5F5;
+  }
+
+  th,
+  .table__head{
+    font-weight: bold;
+    display: table-cell;
+    font-size: .8125em;
+    line-height: 1.384;
+    padding: .769em 2em;
+    border-bottom: 2px solid $dodgerBlue;
+    text-align: left;
+  }
+
+  td,
+  .table__cell{
+    display: table-cell;
+    padding: 1em 1.625em;
+    position: relative;
+
+    &:not(:first-child)::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .9rem;
+      bottom: .9rem;
+      border-left: 1px dotted #DEDEDE;
+    }
+  }
+}

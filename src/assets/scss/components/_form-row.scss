@@ -1,0 +1,14 @@
+.form-row{
+  display: block;
+
+  &__title{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
+    color: rgba($base-text-color, .5);
+  }
+
+  &__control{
+    width: 100%;
+  }
+}
